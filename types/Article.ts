@@ -1,12 +1,12 @@
 export type Article = {
 	id: string;
 	title: string;
-	body:{
+	body: {
 		value: string;
 		format: string;
 		processed: string;
 		summary: string;
-	},
+	};
 	image: {
 		data?: null;
 		image?: {
@@ -17,7 +17,7 @@ export type Article = {
 				width: number;
 				height: number;
 				alt?: string;
-			}
+			};
 		};
 	};
 	path: {
