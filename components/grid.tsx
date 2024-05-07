@@ -1,5 +1,4 @@
 import { Article } from '@/types/Article';
-
 import ImageText from './ui/ImageText';
 
 export const GradientPlaceholder = () => <div className="bg-primary" />;
@@ -23,7 +22,7 @@ export const ArticleGridItem = ({
 			image={imgSrc}
 			title={article.title}
 			alt="test"
-			href={`${multiLanguage ? `/${article.path.langcode || locale}` : ''}${article.path.alias}`}
+			href={`${multiLanguage ? `/${article.path.langcode || locale}` : ''}/articles/${article.id}`}
 		/>
 	);
 };
@@ -35,7 +34,7 @@ type ArticleGridProps = {
 
 export const ArticleGrid = ({ data, multiLanguage }: ArticleGridProps) => {
 	return (
-		<div className="flex flex-col">
+		<div className="flex flex-col gap-12 p-12">
 			{data.map((article) => (
 				<ArticleGridItem
 					key={article.id}
