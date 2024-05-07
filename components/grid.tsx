@@ -1,48 +1,51 @@
-import { Article } from '@/types/Article';
-import ImageText from './ui/ImageText';
+import { Article } from "@/types/Article"
+
+import ImageText from "./ui/ImageText"
 
 export const GradientPlaceholder = () => <div className="bg-primary" />;
 
+
+
 type Props = {
-	content: Article;
-	multiLanguage: boolean;
-	locale: string;
-};
+  content: Article
+  multiLanguage: boolean
+  locale: string
+}
 
 // For use with withGrid
 export const ArticleGridItem = ({
-	content: article,
-	multiLanguage,
-	locale,
+  content: article,
+  multiLanguage,
+  locale,
 }: Props) => {
-	const imgSrc = article?.image?.image?.uri?.url;
+  const imgSrc = article?.image?.image?.uri?.url
 
-	return (
-		<ImageText
-			image={imgSrc}
-			title={article.title}
-			alt="test"
-			href={`${multiLanguage ? `/${article.path.langcode || locale}` : ''}/articles/${article.id}`}
-		/>
-	);
-};
+  return (
+    <ImageText
+      image={imgSrc}
+      title={article.title}
+      alt="test"
+      href={`${multiLanguage ? `/${article.path.langcode || locale}` : ""}/articles/${article.id}`}
+    />
+  )
+}
 
 type ArticleGridProps = {
-	data: Article[];
-	multiLanguage: boolean;
-};
+  data: Article[]
+  multiLanguage: boolean
+}
 
 export const ArticleGrid = ({ data, multiLanguage }: ArticleGridProps) => {
-	return (
-		<div className="flex flex-col gap-12 p-12">
-			{data.map((article) => (
-				<ArticleGridItem
-					key={article.id}
-					content={article}
-					multiLanguage={multiLanguage}
-					locale="en"
-				/>
-			))}
-		</div>
-	);
-};
+  return (
+    <div className="flex flex-col gap-12 p-12">
+      {data.map((article) => (
+        <ArticleGridItem
+          key={article.id}
+          content={article}
+          multiLanguage={multiLanguage}
+          locale="en"
+        />
+      ))}
+    </div>
+  )
+}
