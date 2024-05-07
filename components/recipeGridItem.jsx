@@ -10,9 +10,10 @@ export const RecipeGridItem = ({ content: recipe, multiLanguage, locale }) => {
 	return (
 		<Link
 			passHref
-			href={`${multiLanguage ? `/${recipe.path.langcode || locale}` : ''}${
-				recipe.path.alias
-			}`}
+			href="/recipes"
+			// href={`${multiLanguage ? `/${recipe.path.langcode || locale}` : ''}${
+			// 	recipe.path.alias
+			// }`}
 		>
 			<div
 				className={`${styles.card} rounded-lg cursor-pointer h-full overflow-x-hidden`}

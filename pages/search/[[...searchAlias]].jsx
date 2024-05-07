@@ -51,9 +51,10 @@ export default function SearchPage({
 										) : null}
 										<Link
 											passHref
-											href={`${
-												multiLanguage ? `/${path?.langcode || locale}` : ''
-											}${path.alias}`}
+											href="/test"
+											// href={`${
+											// 	multiLanguage ? `/${path?.langcode || locale}` : ''
+											// }${path.alias}`}
 											className="underline"
 										>
 											Read more →
