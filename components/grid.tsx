@@ -1,10 +1,8 @@
 import { Article } from '@/types/Article';
-import styles from './grid.module.css';
+
 import ImageText from './ui/ImageText';
 
-export const GradientPlaceholder = () => (
-	<div className={styles.gradientPlaceholder} />
-);
+export const GradientPlaceholder = () => <div className="bg-primary" />;
 
 type Props = {
 	content: Article;
