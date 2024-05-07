@@ -7,6 +7,7 @@ import { Article } from '@/types/Article';
 import getObject from '@/utils/api/getObject';
 import { GetServerSidePropsContext } from 'next';
 import React from 'react';
+
 export const getServerSideProps = async (
 	context: GetServerSidePropsContext,
 ) => {
