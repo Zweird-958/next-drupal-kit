@@ -19,7 +19,6 @@ const ImageText = (props: Props) => {
 		image,
 		alt,
 		title,
-		description,
 		reverse,
 		buttonText = 'En savoir plus',
 		className,
