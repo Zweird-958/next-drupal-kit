@@ -1,21 +1,21 @@
 .section {
-    @apply flex flex-col m-auto mt-10 max-h-screen; 
+  @apply m-auto mt-10 flex max-h-screen flex-col;
 }
 
 .container {
-    @apply m-auto;
-    max-width: 512px; 
+  @apply m-auto;
+  max-width: 512px;
 }
 
 .listTitle {
-    font-size: 1.75rem; 
+  font-size: 1.75rem;
 }
 
-@media (min-width: 1024px) { 
-    .section {
-		min-width: 768px;
-	}
-    .container {
-        @apply max-w-screen-lg; 
-    }
+@media (min-width: 1024px) {
+  .section {
+    min-width: 768px;
+  }
+  .container {
+    @apply max-w-screen-lg;
+  }
 }
